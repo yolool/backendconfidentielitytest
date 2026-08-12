@@ -19,7 +19,7 @@ spring:
           starttls:
             enable: true
   application:
-    name: E-medcare
+    name: confidentielty
 
   servlet:
     multipart:
