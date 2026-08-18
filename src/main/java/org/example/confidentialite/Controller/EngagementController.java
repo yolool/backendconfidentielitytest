@@ -3,7 +3,6 @@ package org.example.confidentialite.Controller;
 import lombok.RequiredArgsConstructor;
 import org.example.confidentialite.Dto.EngagementDto;
 import org.example.confidentialite.Entity.Engagement;
-import org.example.confidentialite.Repository.EngagementRepo;
 import org.example.confidentialite.Service.EmailService;
 import org.example.confidentialite.Service.EngagementService;
 import org.springframework.http.HttpHeaders;

@@ -3,12 +3,10 @@ package org.example.confidentialite.Controller;
 import lombok.RequiredArgsConstructor;
 import org.example.confidentialite.Dto.DepartementDto;
 import org.example.confidentialite.Dto.PersonnelDto;
-import org.example.confidentialite.Repository.PersonnelRepo;
 import org.example.confidentialite.Service.PersonnelService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
