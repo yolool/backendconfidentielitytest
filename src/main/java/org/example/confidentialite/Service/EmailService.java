@@ -24,7 +24,7 @@ public class EmailService {
     @Retryable(
             retryFor = { Exception.class },
             maxAttempts = 3,
-            backoff = @Backoff(delay = 3000) // Waits 3 seconds between retries
+            backoff = @Backoff(delay = 3000)
     )
     public void sendEngagementEmailAsync(byte[] fileBytes, String filename, String subject) throws MessagingException {
         log.info("Attempting to send email for file: {}", filename);
