@@ -11,6 +11,6 @@ import java.util.Optional;
 @Repository
 public interface EngagementRepo extends JpaRepository<Engagement,Long> {
 
-    @Query("select e from Engagement e where e.personnel.IdPersonnel = :idPersonnel")
-    Optional<Engagement> findByIdPersonnel(@Param("idPersonnel") String idPersonnel);
+    @Query("select e.statut from Engagement e where e.personnel.IdPersonnel = :idPersonnel")
+    Optional<String> findByIdPersonnel(@Param("idPersonnel") String idPersonnel);
 }

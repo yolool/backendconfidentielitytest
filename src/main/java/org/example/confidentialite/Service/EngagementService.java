@@ -15,8 +15,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
@@ -81,19 +79,10 @@ public class EngagementService {
     }
 
     public EngagementDto FindEngagementByIdPersonnel(String idPersonnel) {
-        Engagement engagement= engagementRepo.findByIdPersonnel(idPersonnel).orElseThrow(()-> new RuntimeException("No engagement found with id: " + idPersonnel));
-        return new EngagementDto(
-                null ,
-                null,
-                null,
-                engagement.getStatut(),
-                null,
-                null,
-                null,
-                null,
-                null
+        String statut = engagementRepo.findByIdPersonnel(idPersonnel)
+                .orElseThrow(() -> new RuntimeException("No engagement found with id: " + idPersonnel));
 
-        );
+        return new EngagementDto(null, null, null, statut, null, null, null, null, null);
     }
 
 }
